@@ -27,7 +27,6 @@ Figma file: https://www.figma.com/file/6EHiaFcKwHqSe5R6O6XRsE/Smart-Watch-eComme
 
 ### Screenshot
 
-
 <img width="1425" alt="Screenshot 2022-12-21 at 22 53 43" src="https://user-images.githubusercontent.com/67371847/219624825-b392ce1e-75cd-45e3-97c9-3f503ab57621.png">
 <img width="1425" alt="Screenshot 2022-12-21 at 22 53 53" src="https://user-images.githubusercontent.com/67371847/219626450-af4d2f2e-323e-4e9d-a78c-9d1fa31bbae8.png">
 <img width="1425" alt="Screenshot 2022-12-21 at 22 54 06" src="https://user-images.githubusercontent.com/67371847/219626520-e182df7e-33ed-48c4-a388-1188cced281a.png">

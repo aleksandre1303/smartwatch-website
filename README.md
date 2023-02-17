@@ -38,7 +38,7 @@ Figma file: https://www.figma.com/file/6EHiaFcKwHqSe5R6O6XRsE/Smart-Watch-eComme
 ### Links
 
 - Solution URL:  https://github.com/aleksandre1303/testimonial-grid-section 
-- Live Site URL: https://aleksandre1303.github.io/testimonial-grid-section/
+- Live Site URL: https://aleksandre1303.github.io/smartwatch-website/
 
 
 ## Author

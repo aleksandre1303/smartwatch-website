@@ -1,0 +1,505 @@
+@import "./global";
+@import "./variables";
+
+.header__hero-bg {
+  background: linear-gradient(155.28deg, #383638 2.06%, #0b0b0b 33.08%);
+  margin-bottom: 146px;
+}
+
+/********** Header **********/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: $black;
+  padding: 1.5rem 0 1.5rem;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    position: relative;
+  }
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__list-item {
+  list-style: none;
+  margin-right: 35px;
+
+  .menu__item-link {
+    position: relative;
+    text-decoration: none;
+    color: $darkGray;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: $white;
+      left: 50%;
+      right: 50%;
+      bottom: -0.5rem;
+      transform: translate(-50%, -50%);
+      transition: all 0.7s;
+    }
+    &:hover::before {
+      width: 50%;
+    }
+  }
+}
+
+.icons__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "1";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -3px;
+    right: 12px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+}
+
+.icon {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+/********** Hero Section **********/
+
+.hero {
+  padding: 102px 0 180px;
+}
+
+.hero__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-img {
+    max-width: 100%;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+
+  &-title {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 125.5%;
+    color: #ffffff;
+  }
+
+  &-text {
+    margin: 36px 0 47px;
+  }
+}
+.hero__btn {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+/********** Main - watches **********/
+
+.main {
+  margin-bottom: 135px;
+}
+
+.main__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.main__inner-box {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 46px 51px 44.74px 41px;
+
+  background: #f6f6f6;
+  border-radius: 22px;
+  transition: 0.7s;
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+  &:hover::before {
+    height: 100%;
+  }
+
+  &:hover::after {
+    height: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    left: 0;
+    top: 0;
+    width: 1%;
+    height: 0%;
+    transition: all 1.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    right: 0;
+    bottom: 0;
+    width: 1%;
+    height: 0%;
+    transition: all 1.3s ease-in-out;
+  }
+
+  .main__inner-content {
+    display: block;
+    margin-left: 26px;
+
+    &-title {
+      font-weight: 700;
+      font-family: $inter;
+      font-size: 2.25rem;
+      line-height: 44px;
+      color: $black;
+      margin-bottom: 9px;
+    }
+
+    &-text {
+      line-height: 19px;
+    }
+  }
+}
+
+/********** Products Section **********/
+
+.product__inner-item {
+  width: 100%;
+
+  .products__inner-image-img {
+    transition: all 0.7s;
+  }
+
+  &:hover .products__inner-image-img {
+    transform: scale(1.1);
+  }
+}
+
+.products__inner {
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.products__inner-image-container {
+  background-color: $lightGray;
+  padding: 29px 43px 27.97px 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.fav-cart__icons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.product__inner-item-content {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: $black;
+  }
+}
+
+.sale__price-container {
+  display: flex;
+  align-items: center;
+
+  &--now {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120.5%;
+    color: $black;
+
+    margin-left: 3px;
+  }
+
+  &--before {
+    text-decoration: line-through;
+  }
+}
+
+.product__inner-item--stars {
+  margin: 8px 0 8px;
+}
+
+/********** People About Section **********/
+
+.about__inner {
+  margin-top: 3.375rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 47px;
+
+  &-container {
+    background-color: $lightGray;
+    width: 100%;
+    border-radius: 22px;
+    padding: 30px 42.69px 30px 34.32px;
+
+    &--content {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.about__inner-container--texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-left: 27.38px;
+
+  &--text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 0 9px;
+  }
+}
+
+/********** Slider dots **********/
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 42px 0 135px;
+
+  &__dot {
+    width: 18px;
+    height: 18px;
+    background-color: $lightGray2;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 11px;
+  }
+
+  & .active {
+    background-color: $blue;
+  }
+}
+
+/********** Subscribe Section **********/
+
+.newsletter__inner-container {
+  background-color: $lightGray;
+  width: 100%;
+  border-radius: 22px;
+  position: relative;
+
+  padding: 28px 105px;
+
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.newsletter__inner-container--content--texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  font-family: $inter;
+}
+
+.newsletter__text {
+  margin: 12px 0 40px;
+}
+
+.subscribe__button {
+  width: 131px;
+  height: 45px;
+  margin: 0;
+
+  &--btn {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+/********** Footer **********/
+
+.footer {
+  margin-top: 91px;
+}
+
+.footer__inner {
+  background-color: $black2;
+  padding: 23px;
+
+  &--text {
+    text-align: center;
+    color: $white;
+    font-family: $inter;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .container {
+    width: 95%;
+
+    .hero__content-title {
+      font-size: 3rem;
+    }
+
+    .hero__inner-img {
+      height: 500px;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .hero {
+      padding: 90px 0;
+      .hero__content {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .hero__inner {
+      flex-direction: column;
+      text-align: center;
+
+      &-img {
+        display: none;
+      }
+    }
+
+    .hero__content {
+      margin-top: 4rem;
+    }
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+
+    .about__inner-container--content {
+      flex-direction: column;
+    }
+
+    .about__inner-container--texts {
+      align-items: center;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .newsletter__inner-container--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      &--texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      &--img {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 685px) {
+    .main__inner-box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &-img {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .icons__container {
+      display: none;
+    }
+
+    body {
+      font-size: 14px;
+    }
+  }
+}
+
+.newsletter__title {
+  font-size: 2rem;
+}
+
+.form__form-input-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header__inner {
+    display: flex;
+    flex-direction: column;
+
+    .menu__list {
+      margin: 0.5rem 0 0 2rem;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}
